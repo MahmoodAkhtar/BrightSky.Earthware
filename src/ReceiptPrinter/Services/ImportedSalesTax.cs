@@ -1,6 +1,5 @@
 ﻿using ReceiptPrinter.Domain;
 using ReceiptPrinter.Interfaces;
-using System;
 
 namespace ReceiptPrinter.Services
 {
@@ -15,7 +14,12 @@ namespace ReceiptPrinter.Services
 
         public double Appy(BasketItem item)
         {
-            throw new NotImplementedException();
+            double tax = 0;
+
+            if (_classifier.Classify(item) == GoodsType.Unknown)
+                tax = item.Price * 0.1;
+
+            return tax;
         }
     }
 }
