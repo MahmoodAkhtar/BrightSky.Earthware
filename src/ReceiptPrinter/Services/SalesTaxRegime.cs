@@ -7,12 +7,10 @@ namespace ReceiptPrinter.Services
     public class SalesTaxRegime : ISalesTaxRegime
     {
         private readonly List<ISalesTaxStratergy> _stratergies;
-        private readonly IGoodsClassifier _classifier;
 
-        public SalesTaxRegime(IGoodsClassifier classifier)
+        public SalesTaxRegime()
         {
             _stratergies = new List<ISalesTaxStratergy>();
-            _classifier = classifier;
         }
 
         public double Appy(BasketItem[] items)
