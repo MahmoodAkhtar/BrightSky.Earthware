@@ -8,7 +8,7 @@ namespace ReceiptPrinter.Tests
     public class ReceiptGeneratorTests
     {
         [AutoDomainData]
-        public void Test1()
+        public void Generate_Scenario_1()
         {
         }
     }
