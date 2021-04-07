@@ -21,7 +21,7 @@ namespace ReceiptPrinter.Services
                 foreach (var stratergy in _stratergies)
                     tax += stratergy.Appy(item);
 
-            return tax;
+            return tax; // TODO: round up to nearest £0.05
         }
 
         public void Register(ISalesTaxStratergy stratergy)
