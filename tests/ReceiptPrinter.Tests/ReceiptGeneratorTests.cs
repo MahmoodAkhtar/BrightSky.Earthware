@@ -3,12 +3,13 @@ using Xunit;
 
 namespace ReceiptPrinter.Tests
 {
-    public class UnitTest1
+    using Testing;
+
+    public class ReceiptGeneratorTests
     {
-        [Fact]
+        [AutoDomainData]
         public void Test1()
         {
-
         }
     }
 }
